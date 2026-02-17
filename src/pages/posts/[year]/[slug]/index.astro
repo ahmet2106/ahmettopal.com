@@ -1,0 +1,29 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PostDetails from "@layouts/PostDetails.astro";
+import { getPostYear } from "@utils/getPostInfo";
+import getPostsWithRT from "@utils/getPostsWithRT";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  year: string;
+  slug: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const postsWithRT = await getPostsWithRT(posts);
+
+  return postsWithRT.map(post => {
+    const year = getPostYear(post);
+    return {
+      params: { year, slug: post.slug },
+      props: { post, year, slug: post.slug },
+    };
+  });
+}
+
+const { post, year, slug } = Astro.props;
+---
+
+<PostDetails post={post} {year} {slug} />
