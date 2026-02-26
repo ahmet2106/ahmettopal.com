@@ -24,7 +24,7 @@ An Agent is something different.
 
 An AI Agent is a system that doesn't just respond, it acts _(or at least, it tries)_. It receives a goal, figures out a plan, executes steps, checks the results and corrects itself. The whole thing runs in a loop, the so-called **Agent Loop**. Think of an intern who gets a task: They read the assignment, think about it, execute something, check if it's right, and if not, they try again.
 
-![OpenClaw Agent Loop](/public/assets/blog/2026/how-a-lobster-changed-ai/agent-loop.png)
+![OpenClaw Agent Loop](/assets/blog/2026/how-a-lobster-changed-ai/agent-loop.png)
 
 At the core is Reasoning, the model's "thinking." Modern AI models like Claude, ChatGPT or Gemini have a so-called "Thinker" that reasons step by step before acting. But here's the crucial point that many people don't understand: **The model doesn't understand anything.** It's a probability machine. It calculates the most likely next word (token) based on its training. That works impressively well but it's not understanding in the human sense.
 
