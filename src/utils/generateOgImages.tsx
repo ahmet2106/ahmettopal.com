@@ -8,11 +8,11 @@ import siteOgImage from "./og-templates/site";
 
 const REGULAR_FONT_PATH = resolve(
   process.cwd(),
-  "src/assets/fonts/IBMPlexMono-Regular.ttf"
+  "src/assets/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf"
 );
 const BOLD_FONT_PATH = resolve(
   process.cwd(),
-  "src/assets/fonts/IBMPlexMono-Bold.ttf"
+  "src/assets/fonts/IBMPlexMono/IBMPlexMono-Bold.ttf"
 );
 
 const toArrayBuffer = (buffer: Buffer): ArrayBuffer =>
